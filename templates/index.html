@@ -64,7 +64,7 @@
      document.getElementById("downloadResult").innerHTML = "Download Speed : " + downloadSpeedMbps.toFixed(2) + " Mbps";
     }
    };
-
+  
    xhr.send();
   }
  </script>
@@ -92,7 +92,7 @@
     if (xhr.readyState === XMLHttpRequest.DONE) {
      var endTime = new Date().getTime();
      var duration = endTime - startTime;
-     var uploadSpeedMbps = (file.size / (1024 * 1024)) / (duration / 1000);
+     var uploadSpeedMbps = (file.size / (1024 * 1024)) / (duration / 100);
      document.getElementById("uploadResult").innerHTML = "Upload Speed : " + uploadSpeedMbps.toFixed(2) + " Mbps";
     }
    };
