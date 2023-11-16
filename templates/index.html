@@ -92,7 +92,7 @@
     if (xhr.readyState === XMLHttpRequest.DONE) {
      var endTime = new Date().getTime();
      var duration = endTime - startTime;
-     var uploadSpeedMbps = (file.size / (1024 * 1024)) / (duration / 100);
+     var uploadSpeedMbps = (file.size / (1024 * 1024)) / (duration / 10000);
      document.getElementById("uploadResult").innerHTML = "Upload Speed : " + uploadSpeedMbps.toFixed(2) + " Mbps";
     }
    };
